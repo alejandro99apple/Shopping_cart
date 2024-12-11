@@ -1,0 +1,54 @@
+header {
+    background-color: #365238; /* Color verde */
+    color: white;
+    padding: 5px;
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0; /* Ubicación en la parte superior */
+    left: 0; /* Alineación a la izquierda */
+    right: 0; /* Alineación a la derecha */
+    width: 100%; /* Ancho completo */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    display: flex; /* Usar flexbox para alinear elementos */
+    justify-content: space-between; /* Espacio entre el título y la navegación */
+    align-items: center; /* Centrar verticalmente */
+    border: 2px solid rgba(0, 0, 0, 0.5); /* Borde oscuro sombreeado */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para el borde */
+}
+
+header h3 {
+    margin: 0;
+    font-size: 2em; /* Tamaño de fuente del título */
+    text-align: left; /* Alinear el título a la izquierda */
+    color: #96bf03;
+}
+
+nav {
+    margin-top: 0; /* Eliminar margen superior */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold; /* Negrita para los enlaces */
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #e0e0e0; /* Color más claro al pasar el mouse */
+}
+
+img{
+    max-width: 30px;
+}
+
+h3 a {
+    text-decoration: none;
+    color: #96bf03; /* Cambiar el color del enlace a #96bf03 */
+}
+
+h3 a:hover {
+    text-decoration: none;
+    color: #45550c; /* Color más claro al pasar el mouse */
+}
+

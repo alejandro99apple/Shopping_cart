@@ -1,0 +1,48 @@
+.plant-card {
+    background-color: rgba(255, 255, 255, 0.3); /* Fondo blanco difuminado al 30% */
+    backdrop-filter: blur(10px); /* Difuminado del fondo */
+    width: 300px; /* Ancho fijo para todas las tarjetas */
+    height: 280px; /* Alto fijo para todas las tarjetas */
+    display: flex; /* Usar flexbox para alinear contenido */
+    flex-direction: column; /* Alinear elementos en columna */
+    justify-content: center; /* Centrar contenido verticalmente */
+    align-items: center; /* Centrar contenido horizontalmente */
+    border-radius: 5%;
+    position:relative;
+}
+
+.plant-card img {
+    position: absolute;
+    max-width: 60%; /* Aumentar el tamaño máximo de las imágenes al 100% del contenedor */
+    max-height: auto; /* Mantener la proporción de aspecto de la imagen */
+    top:5%;
+    border-radius: 5%;
+}
+
+.btn{
+    position: absolute;
+    bottom: 5%;
+}
+
+
+.description {
+
+    font-size: 0.8em; /* Tamaño de letra más pequeño */
+    font-style: italic; /* Texto en cursiva */
+    margin: 0;
+}
+.name {
+    position: relative;
+    top: -5px; /* Mover el nombre 5px hacia arriba */
+    margin: 0;
+}
+
+
+.price {
+    position: relative;
+    top: -5px; /* Mover el precio 5px hacia arriba */
+    margin: 0;
+}
+
+
+
