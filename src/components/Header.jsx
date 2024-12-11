@@ -6,15 +6,15 @@ import './Header.css';
 const Header = () => {
     const { cartItems } = useContext(CartContext);
     const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
+    const uniquePlantsCount = cartItems.length; // Contar plantas diferentes en el carrito
 
     return (
         <header>
-            <h1> Plant Paradise</h1>
+            <h3><Link to="/"><img src='shopping_cart\public\icon.svg'></img> Plant Paradise</Link></h3>
             <nav>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <Link to="/">Inicio</Link>
                     <Link to="/products">Productos</Link>
-                    <Link style={{marginRight:'40px'}} to="/cart">Carrito</Link>
+                    <Link style={{marginRight:'40px'}} to="/cart">Carrito ({uniquePlantsCount})</Link>
                 </div>
             </nav>
         </header>

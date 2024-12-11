@@ -6,6 +6,7 @@ export const CartContext = createContext();
 // Proveedor del contexto del carrito
 export const CartProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState([]);
+    const [plantsInCart, setPlantsInCart] = useState({}); // Estado para rastrear plantas en el carrito
     const [plants, setPlants] = useState([
         // Aquí puedes agregar algunas plantas de ejemplo
         { id: 1, name: 'Pothos', price: 10, description: 'Planta de interior fácil de cuidar', image: 'shopping_cart/public/planta1.jpg' },
@@ -33,11 +34,15 @@ export const CartProvider = ({ children }) => {
             // Si no está en el carrito, agrégala con cantidad 1
             setCartItems([...cartItems, { ...plant, quantity: 1 }]);
         }
+        // Actualizar el estado de plantas en el carrito
+        setPlantsInCart(prev => ({ ...prev, [plant.id]: true }));
     };
 
     // Función para eliminar una planta del carrito
     const removeFromCart = (id) => {
         setCartItems(cartItems.filter(item => item.id !== id));
+        // Actualizar el estado de plantas en el carrito
+        setPlantsInCart(prev => ({ ...prev, [id]: false }));
     };
 
     // Función para actualizar la cantidad de una planta en el carrito
@@ -52,7 +57,7 @@ export const CartProvider = ({ children }) => {
     };
 
     return (
-        <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, updateQuantity, plants }}>
+        <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, updateQuantity, plants, plantsInCart }}>
             {children}
         </CartContext.Provider>
     );

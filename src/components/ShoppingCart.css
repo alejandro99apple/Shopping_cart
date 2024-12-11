@@ -7,6 +7,8 @@
     align-items: center; /* Centrar horizontalmente */
     text-align: center; /* Centrar texto */
     margin-top: 10px;
+    overflow-y: auto; /* Permitir scroll vertical */
+    max-height: 80vh; /* Limitar la altura máxima para permitir el scroll */
 }
 
 
@@ -19,4 +21,16 @@
 h2, h3 {
 
     text-shadow: 1px 1px 2px black; /* Sombra negra para mayor contraste */
+}
+
+.item {
+    background-image: url('${item.image}'); /* Usar la imagen de la planta correspondiente */
+    background-size: cover; /* Cubrir todo el contenedor */
+    background-position: center; /* Centrar la imagen de fondo */
+    border-radius: 5%; /* Mantener el borde redondeado */
+    position: relative; /* Para posicionar otros elementos dentro */
+}
+
+.item img {
+    display: none; /* Ocultar la etiqueta de imagen ya que se usa como fondo */
 }

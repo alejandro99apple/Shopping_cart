@@ -8,19 +8,19 @@ const ShoppingCart = () => {
 
     return (
         <div className="shopping-cart">
-            <h2>Tu Carrito</h2>
+            <h2>Your Shopping Cart</h2>
             {cartItems.map(item => (
-                <div class="item" key={item.id}>
-                    <img src={item.image} alt={item.name} />
+                <div className="item" key={item.id} style={{ margin: '10px 0', backgroundImage: `url(${item.image})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '150px', color: 'white' }}>
                     <h3>{item.name}</h3>
-                    <button onClick={() => removeFromCart(item.id)}>Eliminar</button>
+                    <p>Subtotal: ${item.price * item.quantity}</p>
+                    <button onClick={() => removeFromCart(item.id)}>Remove</button>
                     <button onClick={() => updateQuantity(item.id, item.quantity + 1)}>+</button>
                     <button onClick={() => updateQuantity(item.id, item.quantity - 1)}>-</button>
-                    <p>Subtotal: ${item.price * item.quantity}</p>
                 </div>
             ))}
             <h3>Total: ${cartItems.reduce((total, item) => total + item.price * item.quantity, 0)}</h3>
-            <button>Checkout</button>
+            <button >Checkout</button>
+            <button style={{marginTop:'5px'}} onClick={() => window.location.href = '/products'}>Continue Shopping</button>
         </div>
     );
 };

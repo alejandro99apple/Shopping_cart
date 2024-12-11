@@ -1,7 +1,7 @@
 header {
     background-color: #365238; /* Color verde */
     color: white;
-    padding: 15px;
+    padding: 5px;
     position: fixed; /* Fija el header en la parte superior */
     top: 0; /* Ubicación en la parte superior */
     left: 0; /* Alineación a la izquierda */
@@ -15,10 +15,11 @@ header {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para el borde */
 }
 
-header h1 {
+header h3 {
     margin: 0;
-    font-size: 2.5em; /* Tamaño de fuente del título */
+    font-size: 2em; /* Tamaño de fuente del título */
     text-align: left; /* Alinear el título a la izquierda */
+    color: #96bf03;
 }
 
 nav {
@@ -38,5 +39,16 @@ nav a:hover {
 }
 
 img{
-    max-width: 20px;
+    max-width: 30px;
 }
+
+h3 a {
+    text-decoration: none;
+    color: #96bf03; /* Cambiar el color del enlace a #96bf03 */
+}
+
+h3 a:hover {
+    text-decoration: none;
+    color: #45550c; /* Color más claro al pasar el mouse */
+}
+
