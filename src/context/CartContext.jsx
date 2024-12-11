@@ -17,6 +17,7 @@ export const CartProvider = ({ children }) => {
         { id: 7, name: 'Ficus', price: 22, description: 'Planta de interior popular', image: 'shopping_cart/public/planta2.jpg' },
         { id: 8, name: 'Ficus', price: 22, description: 'Planta de interior popular', image: 'shopping_cart/public/planta2.jpg' },
         { id: 9, name: 'Ficus', price: 22, description: 'Planta de interior popular', image: 'shopping_cart/public/planta2.jpg' },
+        { id: 10, name: 'Ficus', price: 22, description: 'Planta de interior popular', image: 'shopping_cart/public/planta2.jpg' },
         // Agrega más plantas según sea necesario
     ]);
 

@@ -26,14 +26,14 @@ const ProductListing = () => {
 
     return (
         <div className="product-listing">
-            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px' }}>
                 {currentPlants.map(plant => (
                     <PlantCard key={plant.id} plant={plant} addToCart={addToCart} />
                 ))}
             </div>
-            <div style={{ marginTop:'10px'}}>
-                <button class="action_buttons" onClick={handlePrevPage} disabled={currentPage === 0}>Previous</button>
-                <button class="action_buttons" onClick={handleNextPage} disabled={(currentPage + 1) * itemsPerPage >= plants.length}>Next</button>
+            <div style={{ marginTop: '10px' }}>
+                <button className="action_buttons" onClick={handlePrevPage} disabled={currentPage === 0}>Anterior</button>
+                <button className="action_buttons" onClick={handleNextPage} disabled={(currentPage + 1) * itemsPerPage >= plants.length}>Siguiente</button>
             </div>
         </div>
 
