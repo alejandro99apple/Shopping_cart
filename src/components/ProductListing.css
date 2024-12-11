@@ -1,0 +1,16 @@
+.product-listing {
+    margin-top: 75px;
+    width: 100vw; /* Ocupar todo el ancho de la página */
+    padding: 20px; /* Espaciado interno */
+    box-sizing: border-box; /* Incluir padding en el ancho total */
+    display: flex; /* Usar flexbox para centrar contenido */
+    flex-direction: column; /* Alinear elementos en columna */
+    align-items: center; /* Centrar horizontalmente */
+    text-align: center; /* Centrar texto */
+
+}
+
+.action_buttons{
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+}
