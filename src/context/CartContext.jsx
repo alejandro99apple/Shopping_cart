@@ -9,22 +9,22 @@ export const CartProvider = ({ children }) => {
     const [plantsInCart, setPlantsInCart] = useState({}); // Estado para rastrear plantas en el carrito
     const [plants, setPlants] = useState([
         // Aquí puedes agregar algunas plantas de ejemplo
-        { id: 1, name: 'Pothos', price: 10, description: 'Easy to care for indoor plant', image: 'shopping_cart/public/planta1.jpg' },
-        { id: 2, name: 'Ficus', price: 15, description: 'Popular indoor plant', image: 'shopping_cart/public/planta2.jpg' },
-        { id: 3, name: 'Sansevieria', price: 20, description: 'Resilient indoor plant', image: 'shopping_cart/public/planta3.jpg' },
-        { id: 4, name: 'Peace Lily', price: 25, description: 'Indoor plant that purifies the air', image: 'shopping_cart/public/planta4.jpg' },
-        { id: 5, name: 'Dracaena', price: 30, description: 'Easy care indoor plant', image: 'shopping_cart/public/planta5.jpg' },
-        { id: 6, name: 'Christmas Cactus', price: 12, description: 'Indoor plant with flowers', image: 'shopping_cart/public/planta6.jpg' },
-        { id: 7, name: 'Areca Palm', price: 40, description: 'Tropical indoor plant', image: 'shopping_cart/public/planta7.jpg' },
-        { id: 8, name: 'Lucky Bamboo', price: 18, description: 'Indoor plant that brings good luck', image: 'shopping_cart/public/planta8.jpg' },
-        { id: 9, name: 'Lavender', price: 15, description: 'Aromatic outdoor plant', image: 'shopping_cart/public/planta9.jpg' },
-        { id: 10, name: 'Geranium', price: 10, description: 'Colorful outdoor plant', image: 'shopping_cart/public/planta10.jpg' },
-        { id: 11, name: 'Rose', price: 25, description: 'Classic outdoor plant', image: 'shopping_cart/public/planta11.jpg' },
-        { id: 12, name: 'Hydrangea', price: 30, description: 'Outdoor plant with large flowers', image: 'shopping_cart/public/planta12.jpg' },
-        { id: 13, name: 'Cactus', price: 8, description: 'Low maintenance succulent plant', image: 'shopping_cart/public/planta13.jpg' },
-        { id: 14, name: 'Aloe Vera', price: 12, description: 'Succulent plant with medicinal properties', image: 'shopping_cart/public/planta14.jpg' },
-        { id: 15, name: 'Echeveria', price: 15, description: 'Ornamental succulent plant', image: 'shopping_cart/public/planta15.jpg' },
-        { id: 16, name: 'Jade Plant', price: 20, description: 'Popular succulent known for its resilience', image: 'shopping_cart/public/planta16.jpg' },
+        { id: 1, name: 'Pothos', price: 10, description: 'Easy to care for indoor plant', image: `https://getblooms.com/cdn/shop/articles/Pothos_Plant_Care_The_Easiest_Trailing_Houseplant.webp?v=1701182365` },
+        { id: 2, name: 'Ficus', price: 15, description: 'Popular indoor plant', image: 'https://tusplantas.es/wp-content/uploads/2023/04/ficus-portada-1-e1683018072412.jpg' },
+        { id: 3, name: 'Sansevieria', price: 20, description: 'Resilient indoor plant', image: 'https://image.made-in-china.com/202f0j00jtHqOvRrZKbL/Live-Plant-Golden-Hahnii-Sansevieria-Trifasciata.webp' },
+        { id: 4, name: 'Peace Lily', price: 25, description: 'Indoor plant that purifies the air', image: 'https://hips.hearstapps.com/hmg-prod/images/peace-lily-plant-in-a-bright-home-royalty-free-image-1715860400.jpg?crop=0.675xw:1.00xh;0.0224xw,0&resize=1200:*' },
+        { id: 5, name: 'Dracaena', price: 30, description: 'Easy care indoor plant', image: 'https://es.plantsfarm.com/uploads/202237056/madagascar-dragon-tree-dracaena-marginata59552676966.jpg' },
+        { id: 6, name: 'Christmas Cactus', price: 12, description: 'Indoor plant with flowers', image: 'https://i0.wp.com/sugarcreekgardens.com/wp-content/uploads/2022/11/Christmas-Cactus-Coral-Red.jpg?fit=1000%2C1000&ssl=1' },
+        { id: 7, name: 'Areca Palm', price: 40, description: 'Tropical indoor plant', image: 'https://binnybotanics.in/wp-content/uploads/2024/07/10-3.jpg' },
+        { id: 8, name: 'Lucky Bamboo', price: 18, description: 'Indoor plant that brings good luck', image: 'https://images-na.ssl-images-amazon.com/images/I/518TQOzZSNL._SS400_.jpg' },
+        { id: 9, name: 'Lavender', price: 15, description: 'Aromatic outdoor plant', image: 'https://www.sotogardens.com/cdn/shop/articles/lave.jpg?v=1669539874' },
+        { id: 10, name: 'Geranium', price: 10, description: 'Colorful outdoor plant', image: 'https://covenantchristian.org/wp-content/uploads/2022/02/Geranium-Pink-scaled.jpg' },
+        { id: 11, name: 'Rose', price: 25, description: 'Classic outdoor plant', image: 'https://carbethplants.co.uk/wp-content/uploads/2022/03/prideofengland3.jpg' },
+        { id: 12, name: 'Hydrangea', price: 30, description: 'Outdoor plant with large flowers', image: 'https://pbndesign.com/wp-content/uploads/2023/09/Cityline-Rio-Hydrangea-min-1.webp' },
+        { id: 13, name: 'Cactus', price: 8, description: 'Low maintenance succulent plant', image: 'https://cdn0.uncomo.com/es/posts/7/1/1/tipos_de_cactus_de_interior_51117_600_square.jpg' },
+        { id: 14, name: 'Aloe Vera', price: 12, description: 'Succulent plant with medicinal properties', image: 'https://media.v2.siweb.es/uploaded_thumb_big/af31b8ffd55e9bc92c93c04c7f3fdd12/aloe_hercules.jpeg' },
+        { id: 15, name: 'Echeveria', price: 15, description: 'Ornamental succulent plant', image: 'https://www.picturethisai.com/wiki-image/1080/153653709186793500.jpeg' },
+        { id: 16, name: 'Jade Plant', price: 20, description: 'Popular succulent known for its resilience', image: 'https://cdn.shopify.com/s/files/1/0553/5711/2435/files/PLJDCEJRGL-W-Part1_480x480.webp?v=1711545757' },
         // Agrega más plantas según sea necesario
     ]);
 

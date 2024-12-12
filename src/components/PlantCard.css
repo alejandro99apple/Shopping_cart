@@ -30,6 +30,7 @@
     font-size: 0.8em; /* Tamaño de letra más pequeño */
     font-style: italic; /* Texto en cursiva */
     margin: 0;
+    color: white;
 }
 .name {
     position: relative;

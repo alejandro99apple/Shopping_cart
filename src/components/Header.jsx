@@ -10,7 +10,7 @@ const Header = () => {
 
     return (
         <header>
-            <h3><Link to="/"><img src='shopping_cart\public\icon.svg'></img> Plant Paradise</Link></h3>
+            <h3><Link to="/"><img src='icon.svg'></img> Plant Paradise</Link></h3>
             <nav>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <Link to="/products">Plants</Link>
