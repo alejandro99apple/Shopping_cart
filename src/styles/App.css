@@ -3,7 +3,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('/shopping_cart/public/background.jpg'); /* Imagen de fondo */
+    background-image: url('/public/background.jpg'); /* Imagen de fondo */
     background-size: cover; /* Cubrir todo el fondo */
 
     overflow: hidden; /* Evita el scroll */

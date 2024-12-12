@@ -20,7 +20,7 @@ const ShoppingCart = () => {
             ))}
             <h3>Total: ${cartItems.reduce((total, item) => total + item.price * item.quantity, 0)}</h3>
             <button >Checkout</button>
-            <button style={{marginTop:'5px'}} onClick={() => window.location.href = '/products'}>Continue Shopping</button>
+            
         </div>
     );
 };
