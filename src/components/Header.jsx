@@ -13,8 +13,8 @@ const Header = () => {
             <h3><Link to="/"><img src='shopping_cart\public\icon.svg'></img> Plant Paradise</Link></h3>
             <nav>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <Link to="/products">Productos</Link>
-                    <Link style={{marginRight:'40px'}} to="/cart">Carrito ({uniquePlantsCount})</Link>
+                    <Link to="/products">Plants</Link>
+                    <Link style={{marginRight:'40px'}} to="/cart">Shopping Cart ({uniquePlantsCount})</Link>
                 </div>
             </nav>
         </header>

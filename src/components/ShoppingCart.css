@@ -21,6 +21,7 @@
 h2, h3 {
 
     text-shadow: 1px 1px 2px black; /* Sombra negra para mayor contraste */
+
 }
 
 .item {
@@ -31,6 +32,3 @@ h2, h3 {
     position: relative; /* Para posicionar otros elementos dentro */
 }
 
-.item img {
-    display: none; /* Ocultar la etiqueta de imagen ya que se usa como fondo */
-}

@@ -1,7 +1,6 @@
 .product-listing {
-    margin-top: 75px;
+    margin-top: 70px;
     width: 100vw; /* Ocupar todo el ancho de la página */
-    padding: 20px; /* Espaciado interno */
     box-sizing: border-box; /* Incluir padding en el ancho total */
     display: flex; /* Usar flexbox para centrar contenido */
     flex-direction: column; /* Alinear elementos en columna */

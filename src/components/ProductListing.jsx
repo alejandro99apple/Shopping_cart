@@ -24,16 +24,26 @@ const ProductListing = () => {
 
     const currentPlants = plants.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage);
 
+    // Títulos para cada página
+    const pageTitles = [
+        "Indoor Plants",
+        "Outdoor Plants",
+        "Succulent Plants",
+        "Aromatic Plants",
+        "Garden Plants"
+    ];
+
     return (
         <div className="product-listing">
+            <h2 style={{margin:'0'}}>{pageTitles[currentPage]}</h2> {/* Título dinámico según la página */}
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px' }}>
                 {currentPlants.map(plant => (
                     <PlantCard key={plant.id} plant={plant} addToCart={addToCart} />
                 ))}
             </div>
             <div style={{ marginTop: '10px' }}>
-                <button className="action_buttons" onClick={handlePrevPage} disabled={currentPage === 0}>Anterior</button>
-                <button className="action_buttons" onClick={handleNextPage} disabled={(currentPage + 1) * itemsPerPage >= plants.length}>Siguiente</button>
+                <button className="action_buttons" onClick={handlePrevPage} disabled={currentPage === 0}>Previous</button>
+                <button className="action_buttons" onClick={handleNextPage} disabled={(currentPage + 1) * itemsPerPage >= plants.length}>Next</button>
             </div>
         </div>
 
