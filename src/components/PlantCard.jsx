@@ -13,9 +13,11 @@ const PlantCard = ({ plant }) => {
     return (
         <div className="plant-card">
             <img src={plant.image} alt={plant.name} />
-            <h4 className="name">{plant.name}</h4>
-            <p className="price">Precio: ${plant.price}</p>
-            <p className="description">{plant.description}</p>
+            <div class="info">
+                <h4 className="name">{plant.name}</h4>
+                <p className="price">Price: ${plant.price}</p>
+                <p className="description">{plant.description}</p>
+                </div>
             <button className="btn" onClick={handleAddToCart} disabled={isAddedToCart}>
                 {isAddedToCart ? 'Added to Cart' : 'Add to Cart'}
             </button>
