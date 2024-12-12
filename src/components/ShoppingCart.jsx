@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { CartContext } from '../context/CartContext';
+import { Link } from 'react-router-dom';
 import './ShoppingCart.css';
 
 const ShoppingCart = () => {
@@ -27,7 +28,10 @@ const ShoppingCart = () => {
                 </div>
             ))}
             <h3>Total: ${cartItems.reduce((total, item) => total + item.price * item.quantity, 0)}</h3>
-            <button onClick={handleCheckout}>Checkout</button>
+            <button style={{margin:'5px'}} onClick={handleCheckout}>Checkout</button>
+            
+            <button><Link style={{textDecoration:'none', color:'white'}} to="/products">Continue Shopping</Link></button>
+
             
             {showCheckoutModal && (
                 <>
@@ -39,7 +43,7 @@ const ShoppingCart = () => {
                     <div className="checkout-modal">
                         <div className="modal-content">
                             <span className="close" onClick={closeCheckoutModal}>&times;</span>
-                            <h2>Payment Methods</h2>
+                            <h2>Payment Methods Coming Soon</h2>
                             <div className="payment-methods">
                                 <button>Credit Card</button>
                                 <button>PayPal</button>
