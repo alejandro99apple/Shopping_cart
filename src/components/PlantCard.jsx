@@ -13,7 +13,6 @@ const PlantCard = ({ plant }) => {
     return (
         <div className="plant-card">
             <img src={plant.image} alt={plant.name} />
-            <p>{plant.image}</p>
             <div class="info">
                 <h4 className="name">{plant.name}</h4>
                 <p className="price">Price: ${plant.price}</p>

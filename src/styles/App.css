@@ -3,9 +3,8 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('/public/background.jpg'); /* Imagen de fondo */
+    background-image: url('https://img3.wallspic.com/crops/9/4/9/4/7/174949/174949-girasol-la_semilla_de_girasol-comun_de_girasol-semilla-petalo-1280x720.jpg'); /* Imagen de fondo */
     background-size: cover; /* Cubrir todo el fondo */
-
     overflow: hidden; /* Evita el scroll */
 }
 
